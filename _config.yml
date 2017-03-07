@@ -1,0 +1,30 @@
+title: Dino Tutors
+email: info@dinotutors.com
+description: Dino Tutors is an example of a company in the tutoring industry, showcasing the power of intergrating TutorCruncher into your website.
+baseurl: ''
+url: 'http://dinotutors.com'
+meta_author: Tom Hamilton Stubber
+
+# Build settings
+markdown: kramdown
+theme: minima
+permalink: pretty
+
+gems:
+  - jekyll-feed
+exclude:
+  - Gemfile
+  - Gemfile.lock
+
+footer:
+  copyright: TutorCruncher
+address:
+  - 8A Lower Grosvenor Place
+  - SW1W 0EN, London
+social:
+  - title: twitter
+    url: http://twitter.com/tutorcruncher
+  - title: facebook
+    url: http://facebook.com/tutorcruncher
+  - title: github
+    url: http://github.com/tutorcruncher
