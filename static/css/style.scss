@@ -238,13 +238,13 @@ section#our-tutors {
       box-shadow: None;
       color: white;
       .tcs-name {
+        transition: all .3s ease;
         height: 25px;
       }
+
       &:hover {
+        color: #ccc;
         text-decoration: none !important;
-        .tcs-name {
-          color: darken($primary-colour, 30%);
-        }
       }
     }
     .tcs-modal {

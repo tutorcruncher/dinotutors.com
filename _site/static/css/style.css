@@ -165,11 +165,11 @@ section#our-tutors .socket-container {
     box-shadow: None;
     color: white; }
     section#our-tutors .socket-container .tcs-box .tcs-name {
+      transition: all .3s ease;
       height: 25px; }
     section#our-tutors .socket-container .tcs-box:hover {
+      color: #ccc;
       text-decoration: none !important; }
-      section#our-tutors .socket-container .tcs-box:hover .tcs-name {
-        color: #07342b; }
   section#our-tutors .socket-container .tcs-modal h2 {
     color: #18BC9C; }
   section#our-tutors .socket-container .tcs-modal .tcs-skills span {
