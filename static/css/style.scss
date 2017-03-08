@@ -1,9 +1,14 @@
 ---
 ---
 
+@import url(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
+
 $primary-colour: #18BC9C;
 $secondary-colour: #80B3FF;
 $secondary-dark-colour: #A2122F;
+$tc-blue: #016997;
 
 body {
   overflow-x: hidden;
@@ -76,7 +81,7 @@ hr {
 }
 
 .primary-dark {
-  p, h2, h3, a {
+  p, h2, h3 {
     color: #fff;
   }
   .star {
@@ -207,53 +212,66 @@ section {
 }
 
 a {
-  outline: 0;
   color: $primary-colour;
+  outline: 0;
   &:hover, &:focus, &:active, &.active {
     outline: 0;
     color: $primary-colour;
   }
 }
 
-section#our-tutors {
-  .tcs-box {
-    background-color: $primary-colour;
-    box-shadow: None;
-    color: white;
-    .tcs-name {
-      height: 25px;
-    }
-    &:hover {
-      text-decoration: none !important;
-      .tcs-name {
-        color: darken($primary-colour, 30%);
-      }
-    }
+.tc-link {
+  color: $tc-blue;
+  &:hover, &:focus, &:active, &.active {
+    outline: 0;
+    color: $tc-blue;
+    text-decoration: none;
   }
-  .tcs-modal {
-    h2 {
-      color: $primary-colour;
-    }
-    .tcs-skills {
-      span {
-        background: $primary-colour;
+}
+
+section#our-tutors {
+  .socket-container {
+    max-width: 970px;
+    margin: 0 auto;
+    .tcs-box {
+      background-color: $primary-colour;
+      box-shadow: None;
+      color: white;
+      .tcs-name {
+        height: 25px;
+      }
+      &:hover {
+        text-decoration: none !important;
+        .tcs-name {
+          color: darken($primary-colour, 30%);
+        }
       }
     }
-    .tcs-extra {
-      button {
-        background: $primary-colour;
+    .tcs-modal {
+      h2 {
+        color: $primary-colour;
       }
-    }
-    .tcs-submit {
-      button {
-        background: $primary-colour;
+      .tcs-skills {
+        span {
+          background: $primary-colour;
+        }
+      }
+      .tcs-extra {
+        button {
+          background: $primary-colour;
+        }
+      }
+      .tcs-submit {
+        button {
+          background: $primary-colour;
+        }
       }
     }
   }
 }
 
 .tc-desc {
-  color: #ccc !important;
+  color: $secondary-colour !important;
 }
 
 footer {

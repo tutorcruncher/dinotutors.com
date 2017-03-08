@@ -1,3 +1,6 @@
+@import url(https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/3.3.7/css/bootstrap.min.css);
+@import url(https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css);
+@import url(https://fonts.googleapis.com/css?family=Montserrat:400,700);
 body {
   overflow-x: hidden; }
 
@@ -52,7 +55,7 @@ hr.star:after {
     color: #fff;
     background: #18BC9C; }
 
-.primary-dark p, .primary-dark h2, .primary-dark h3, .primary-dark a {
+.primary-dark p, .primary-dark h2, .primary-dark h3 {
   color: #fff; }
 .primary-dark .star {
   border-color: #fff; }
@@ -141,33 +144,43 @@ section {
     section.first {
       padding-top: 75px; } }
 a {
-  outline: 0;
-  color: #18BC9C; }
+  color: #18BC9C;
+  outline: 0; }
   a:hover, a:focus, a:active, a.active {
     outline: 0;
     color: #18BC9C; }
 
-section#our-tutors .tcs-box {
-  background-color: #18BC9C;
-  box-shadow: None;
-  color: white; }
-  section#our-tutors .tcs-box .tcs-name {
-    height: 25px; }
-  section#our-tutors .tcs-box:hover {
-    text-decoration: none !important; }
-    section#our-tutors .tcs-box:hover .tcs-name {
-      color: #07342b; }
-section#our-tutors .tcs-modal h2 {
-  color: #18BC9C; }
-section#our-tutors .tcs-modal .tcs-skills span {
-  background: #18BC9C; }
-section#our-tutors .tcs-modal .tcs-extra button {
-  background: #18BC9C; }
-section#our-tutors .tcs-modal .tcs-submit button {
-  background: #18BC9C; }
+.tc-link {
+  color: #016997; }
+  .tc-link:hover, .tc-link:focus, .tc-link:active, .tc-link.active {
+    outline: 0;
+    color: #016997;
+    text-decoration: none; }
+
+section#our-tutors .socket-container {
+  max-width: 970px;
+  margin: 0 auto; }
+  section#our-tutors .socket-container .tcs-box {
+    background-color: #18BC9C;
+    box-shadow: None;
+    color: white; }
+    section#our-tutors .socket-container .tcs-box .tcs-name {
+      height: 25px; }
+    section#our-tutors .socket-container .tcs-box:hover {
+      text-decoration: none !important; }
+      section#our-tutors .socket-container .tcs-box:hover .tcs-name {
+        color: #07342b; }
+  section#our-tutors .socket-container .tcs-modal h2 {
+    color: #18BC9C; }
+  section#our-tutors .socket-container .tcs-modal .tcs-skills span {
+    background: #18BC9C; }
+  section#our-tutors .socket-container .tcs-modal .tcs-extra button {
+    background: #18BC9C; }
+  section#our-tutors .socket-container .tcs-modal .tcs-submit button {
+    background: #18BC9C; }
 
 .tc-desc {
-  color: #ccc !important; }
+  color: #80B3FF !important; }
 
 footer {
   color: #fff; }
