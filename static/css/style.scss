@@ -238,12 +238,15 @@ section#our-tutors {
       box-shadow: None;
       color: white;
       .tcs-name {
-        transition: all .3s ease;
+        border: 1px solid $primary-colour;
+        border-radius: 0 0 3px 3px;
+        transition: all .5s ease;
         padding: 5px 0;
       }
 
       &:hover {
-        color: #ccc;
+        color: $primary-colour;
+        background-color: white;
         text-decoration: none !important;
       }
     }
