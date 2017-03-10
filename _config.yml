@@ -15,7 +15,8 @@ gems:
 exclude:
   - Gemfile
   - Gemfile.lock
-
+include:
+  - _redirects
 footer:
   copyright: TutorCruncher
 address:

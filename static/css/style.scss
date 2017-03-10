@@ -70,7 +70,7 @@ hr {
       background-color: #fff;
     }
   }
-  .btn-outline {
+  .btn {
     border: solid 2px $primary-colour;
     &:hover, &:focus, &:active, &.active {
       border: solid 2px $primary-colour;
@@ -91,7 +91,7 @@ hr {
       background-color: $primary-colour;
     }
   }
-  .btn-outline {
+  .btn {
     border: solid 2px #fff;
     &:hover, &:focus, &:active, &.active {
       border: solid 2px #fff;
@@ -239,7 +239,7 @@ section#our-tutors {
       color: white;
       .tcs-name {
         transition: all .3s ease;
-        height: 25px;
+        padding: 5px 0;
       }
 
       &:hover {
@@ -258,15 +258,35 @@ section#our-tutors {
       }
       .tcs-extra {
         button {
-          background: $primary-colour;
-        }
-      }
-      .tcs-submit {
-        button {
-          background: $primary-colour;
+          background: #fff;
+          color: $primary-colour;
+          border: solid 2px $primary-colour;
+          &:hover, &:focus, &:active, &.active {
+            border: solid 2px $primary-colour;
+            color: #fff;
+            background: $primary-colour;
+          }
         }
       }
     }
+  }
+}
+
+section#contact {
+  .tcs-submit {
+    button {
+      background: #fff;
+      color: $primary-colour;
+      border: solid 2px $primary-colour;
+      &:hover, &:focus, &:active, &.active {
+        border: solid 2px $primary-colour;
+        color: #fff;
+        background: $primary-colour;
+      }
+    }
+  }
+  .tcs-field {
+    padding: 8px 0;
   }
 }
 
