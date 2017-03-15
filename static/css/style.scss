@@ -184,6 +184,31 @@ header {
       outline: 0;
     }
   }
+  .tcs-enquiry-modal {
+    .tcs-centre {
+      color: $primary-colour;
+    }
+    .tcs-enquiry-button {
+      background: $primary-colour;
+      border: solid 2px $primary-colour;
+      &:hover {
+        color: $primary-colour;
+        background: transparent;
+        text-decoration: none !important;
+      }
+    }
+    .tcs-submit {
+      button {
+        background: $primary-colour;
+        border: solid 2px $primary-colour;
+        &:hover {
+          color: $primary-colour;
+          background: transparent;
+          text-decoration: none !important;
+        }
+      }
+    }
+  }
 }
 
 .navbar-default, .navbar-inverse {

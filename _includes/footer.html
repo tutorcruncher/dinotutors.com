@@ -57,11 +57,15 @@
 <script>
   socket('9c79f14df986a1ec693c', {
     mode: 'enquiry',
-    element: '#socket-enquiry',
-    router_mode: 'history'
+    element: '#socket-enquiry'
   });
 
   socket('9c79f14df986a1ec693c', {
+    router_mode: 'history'
+  });
+  socket('9c79f14df986a1ec693c', {
+    mode: 'enquiry-modal',
+    element: '#socket-enquiry-modal',
     router_mode: 'history'
   })
 </script>
