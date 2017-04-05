@@ -53,19 +53,23 @@
   ga('create', 'UA-41117087-4', 'auto');
   ga('send', 'pageview');
 </script>
-<script src="https://cdn.tutorcruncher.com/socket/dev/socket.js"></script>
-<script>
-  socket('9c79f14df986a1ec693c', {
-    mode: 'enquiry',
-    element: '#socket-enquiry'
-  });
+<script src="{{ page.socket_url }}"></script>
+{% if page.socket_init_file %}
+  <script src="{{ page.socket_init_file }}"></script>
+{% else %}
+  <script>
+    socket('9c79f14df986a1ec693c', {
+      mode: 'enquiry',
+      element: '#socket-enquiry'
+    });
 
-  socket('9c79f14df986a1ec693c', {
-    router_mode: 'history'
-  });
-  socket('9c79f14df986a1ec693c', {
-    mode: 'enquiry-modal',
-    element: '#socket-enquiry-modal',
-    router_mode: 'history'
-  })
-</script>
+    socket('9c79f14df986a1ec693c', {
+      router_mode: 'history'
+    });
+    socket('9c79f14df986a1ec693c', {
+      mode: 'enquiry-modal',
+      element: '#socket-enquiry-modal',
+      router_mode: 'history'
+    })
+  </script>
+{% endif %}
