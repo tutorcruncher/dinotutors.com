@@ -189,12 +189,17 @@ header {
       color: $primary-colour;
     }
     .tcs-enquiry-button {
-      background: $primary-colour;
-      border: solid 2px $primary-colour;
-      &:hover {
-        color: $primary-colour;
-        background: transparent;
-        text-decoration: none !important;
+      background: none;
+      color: $primary-colour;
+      @media (min-width: 768px) {
+        color: white;
+        background: $primary-colour;
+        border: solid 2px $primary-colour;
+        &:hover {
+          color: $primary-colour;
+          background: transparent;
+          text-decoration: none !important;
+        }
       }
     }
     .tcs-submit {
