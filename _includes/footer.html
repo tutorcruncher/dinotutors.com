@@ -60,15 +60,15 @@
   <script src="{{ page.socket_init_file }}"></script>
 {% else %}
   <script>
-    socket('9c79f14df986a1ec693c', {
+    socket('{{ site.socket_key }}', {
       mode: 'enquiry',
       element: '#socket-enquiry'
     });
 
-    socket('9c79f14df986a1ec693c', {
+    socket('{{ site.socket_key }}', {
       router_mode: 'history'
     });
-    socket('9c79f14df986a1ec693c', {
+    socket('{{ site.socket_key }}', {
       mode: 'enquiry-modal',
       element: '#socket-enquiry-modal',
       router_mode: 'history'
