@@ -10,7 +10,10 @@ markdown: kramdown
 theme: minima
 permalink: pretty
 
-socket_key: a85a3b8c97d4187de595
+socket_key: 36189b9f1d660ff9bc0c
+socket_api_root: https://socket-beta.tutorcruncher.com
+socket_js_url: 'https://cdn.tutorcruncher.com/socket/dev/socket.js'
+
 gems:
   - jekyll-feed
 exclude:
