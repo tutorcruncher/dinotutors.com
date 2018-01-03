@@ -5,7 +5,7 @@ socket('9c79f14df986a1ec693c', {
   api_root: socket_api_root
 });
 
-socket('9c79f14df986a1ec693c', {api_root: socket_api_root);
+socket('9c79f14df986a1ec693c', {api_root: socket_api_root});
 
 socket('9c79f14df986a1ec693c', {
   mode: 'enquiry-modal',
