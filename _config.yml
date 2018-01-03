@@ -10,7 +10,7 @@ markdown: kramdown
 theme: minima
 permalink: pretty
 
-socket_key: 9c79f14df986a1ec693c
+socket_key: 4e526060af253c3faf24
 gems:
   - jekyll-feed
 exclude:
