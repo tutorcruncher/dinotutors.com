@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: socket_example
 title: Subject Filter Example
 permalink: /examples/subject/29-english-language
 description: An example of the tutors list in TutorCruncher socket using the Subject Filter
 ---
 {% highlight html %}
-  <div id="subject-filter"></div>
+<div id="subject-filter"></div>
 
-  <script>
-    socket('{{ site.socket_key }}', {
-      router_mode: 'history',
-      element: '#subject-view',
-      mode: 'grid'
-    });
-  </script>
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#subject-view',
+    mode: 'grid'
+  });
+</script>
 {% endhighlight %}
 
 <div id="subject-view"></div>

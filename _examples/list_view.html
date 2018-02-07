@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: socket_example
 title: List View Example
 permalink: /examples/list-view/
 description: An example of the tutors list in TutorCruncher socket using the List View
 ---
 {% highlight html %}
-  <div id="list-view"></div>
+<div id="list-view"></div>
 
-  <script>
-    socket('{{ site.socket_key }}', {
-      router_mode: 'history',
-      element: '#list-view',
-      mode: 'list'
-    });
-  </script>
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#list-view',
+    mode: 'list'
+  });
+</script>
 {% endhighlight %}
 
 <div id="list-view"></div>

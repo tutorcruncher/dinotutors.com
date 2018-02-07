@@ -1,19 +1,19 @@
 ---
-layout: default
+layout: socket_example
 title: Grid view example
 permalink: /examples/grid-view/
 description: An example of the tutors list in TutorCruncher socket using the Grid View.
 ---
 {% highlight html %}
-  <div id="grid-view"></div>
+<div id="grid-view"></div>
 
-  <script>
-    socket('{{ site.socket_key }}', {
-      router_mode: 'history',
-      element: '#grid-view',
-      mode: 'grid'
-    });
-  </script>
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#grid-view',
+    mode: 'grid'
+  });
+</script>
 {% endhighlight %}
 
 <div id="grid-view"></div>
