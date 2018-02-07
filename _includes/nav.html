@@ -9,20 +9,23 @@
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a class="navbar-brand" href="#page-top">{{ site.title }}</a>
+      <a class="navbar-brand" href="{% unless page.permalink == '/' %}/{% endunless %}#page-top">{{ site.title }}</a>
     </div>
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
       <ul class="nav navbar-nav navbar-right">
         <li class="hidden">
-          <a href="#page-top"></a>
+          <a href="{% unless page.permalink == '/' %}/{% endunless %}#page-top"></a>
         </li>
         <li class="page-scroll">
-          <a href="#our-tutors">Our Tutors</a>
+          <a href="/examples/">Socket Examples</a>
         </li>
         <li class="page-scroll">
-          <a href="#about">About</a>
+          <a href="{% unless page.permalink == '/' %}/{% endunless %}#our-tutors">Our Tutors</a>
+        </li>
+        <li class="page-scroll">
+          <a href="{% unless page.permalink == '/' %}/{% endunless %}#about">About</a>
         </li>
         <li class="page-scroll">
           <a href="https://secure.dinotutors.com">Sign in</a>
@@ -34,3 +37,4 @@
     </div>
   </div>
 </nav>
+<script src="{{ site.socket_url }}"></script>

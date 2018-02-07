@@ -1,0 +1,26 @@
+---
+layout: default
+title: Label example
+permalink: /examples/labels-filter/
+description: An example of the tutors list in TutorCruncher socket using the Labels filter. These tutors all have a label called London Tutors.
+---
+{% highlight html %}
+  <div id="label-filter"></div>
+
+  <script>
+    socket('{{ site.socket_key }}', {
+      router_mode: 'history',
+      labels_include: ['london-tutors'],
+      element: '#label-filter'
+    });
+  </script>
+{% endhighlight %}
+
+<div id="label-filter"></div>
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    labels_include: ['london-tutors'],
+    element: '#label-filter'
+  });
+</script>

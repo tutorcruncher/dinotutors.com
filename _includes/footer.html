@@ -55,23 +55,10 @@
   ga('create', 'UA-41117087-4', 'auto');
   ga('send', 'pageview');
 </script>
-<script src="{{ page.socket_url }}"></script>
-{% if page.socket_init_file %}
-  <script src="{{ page.socket_init_file }}"></script>
-{% else %}
-  <script>
-    socket('{{ site.socket_key }}', {
-      mode: 'enquiry',
-      element: '#socket-enquiry'
-    });
-
-    socket('{{ site.socket_key }}', {
-      router_mode: 'history'
-    });
-    socket('{{ site.socket_key }}', {
-      mode: 'enquiry-modal',
-      element: '#socket-enquiry-modal',
-      router_mode: 'history'
-    })
-  </script>
-{% endif %}
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry-modal',
+    element: '#socket-enquiry-modal',
+    router_mode: 'history'
+  })
+</script>

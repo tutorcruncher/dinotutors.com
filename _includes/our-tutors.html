@@ -42,3 +42,13 @@
     </div>
   </div>
 </section>
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry',
+    element: '#socket-enquiry'
+  });
+
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history'
+  });
+</script>

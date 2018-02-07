@@ -1,0 +1,13 @@
+---
+layout: default
+title: TutorCruncher Socket Examples
+permalink: /examples/
+index: True
+description: Below is a list of examples of how Socket can work
+---
+{% for example in site.examples %}
+  {% unless example.index %}
+    <p><a href="{{ example.permalink }}">{{ example.title }}</a></p>
+  {% endunless %}
+{% endfor %}
+

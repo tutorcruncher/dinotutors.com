@@ -257,46 +257,44 @@ a {
   }
 }
 
-section#our-tutors {
-  .socket-container {
-    max-width: 970px;
-    margin: 0 auto;
-    .tcs-box {
-      background-color: $primary-colour;
-      box-shadow: None;
-      color: white;
-      .tcs-name {
-        border: 1px solid $primary-colour;
-        border-radius: 0 0 3px 3px;
-        transition: all .5s ease;
-        padding: 5px 0;
-      }
+.socket-container {
+  max-width: 970px;
+  margin: 0 auto;
+  .tcs-box {
+    background-color: $primary-colour;
+    box-shadow: None;
+    color: white;
+    .tcs-name {
+      border: 1px solid $primary-colour;
+      border-radius: 0 0 3px 3px;
+      transition: all .5s ease;
+      padding: 5px 0;
+    }
 
-      &:hover {
-        color: $primary-colour;
-        background-color: white;
-        text-decoration: none !important;
+    &:hover {
+      color: $primary-colour;
+      background-color: white;
+      text-decoration: none !important;
+    }
+  }
+  .tcs-modal {
+    h2 {
+      color: $primary-colour;
+    }
+    .tcs-skills {
+      span {
+        background: $primary-colour;
       }
     }
-    .tcs-modal {
-      h2 {
+    .tcs-extra {
+      button {
+        background: #fff;
         color: $primary-colour;
-      }
-      .tcs-skills {
-        span {
-          background: $primary-colour;
-        }
-      }
-      .tcs-extra {
-        button {
-          background: #fff;
-          color: $primary-colour;
+        border: solid 2px $primary-colour;
+        &:hover, &:focus, &:active, &.active {
           border: solid 2px $primary-colour;
-          &:hover, &:focus, &:active, &.active {
-            border: solid 2px $primary-colour;
-            color: #fff;
-            background: $primary-colour;
-          }
+          color: #fff;
+          background: $primary-colour;
         }
       }
     }
