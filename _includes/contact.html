@@ -18,3 +18,9 @@
     </div>
   </div>
 </section>
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry',
+    element: '#socket-enquiry'
+  });
+</script>
