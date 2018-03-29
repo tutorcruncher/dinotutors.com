@@ -1,0 +1,27 @@
+---
+layout: socket_example
+title: Appointments booking example
+permalink: /examples/book-apts/
+description: An example of booking appointments in TutorCruncher using Socket.
+---
+{% highlight html %}
+<div id="book-apts"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#book-apts',
+    mode: 'appointments'
+  });
+</script>
+{% endhighlight %}
+
+<div id="book-apts"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#book-apts',
+    mode: 'appointments'
+  });
+</script>
