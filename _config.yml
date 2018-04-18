@@ -11,7 +11,7 @@ theme: minima
 permalink: pretty
 highlighter: pygments
 
-socket_key: 8da8fae5df5a53143e5b
+socket_key: 91156bc7315cc2acbd51
 gems:
   - jekyll-feed
 exclude:
