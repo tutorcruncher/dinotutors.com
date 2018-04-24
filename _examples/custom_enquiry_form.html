@@ -1,0 +1,142 @@
+---
+layout: socket_example
+title: Custom Enquiry Form Example
+permalink: /examples/custom-enquiry-form
+description: An example of a custom form used instead of Socket Frontend to submit to Socket Server
+---
+{% highlight html %}
+<body>
+
+ ...
+
+  <div id="enquiry-form">
+    <form action="#" method="POST">
+      <input type="text" id="client_name" name="client_name" placeholder="Name (Required)" required="required" maxlength="255">
+      <input type="text" id="service_recipient_name" name="service_recipient_name" placeholder="Student name" maxlength="255">
+      <input type="email" id="client_email" name="client_email" placeholder="Email" maxlength="255">
+      <input type="text" id="client_phone" name="client_phone" placeholder="Phone number" maxlength="255">
+      <textarea id="attributes-tell-us-about-yourself" attrtype="true" name="attributes-tell-us-about-yourself" placeholder="Tell us about your needs" maxlength="2047" rows="5"></textarea>
+      <div class="text-center">
+        <div class="g-recaptcha" data-sitekey="6LdyXRgUAAAAADUNhMVKJDXiRr6DUN8TGOgllqbt"></div>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  ...
+
+  <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script>
+    $('form').submit(function(e) {
+      e.preventDefault()
+      const v = grecaptcha.getResponse()
+      if (v.length === 0) {
+        $('#captcha').html("You can't leave Captcha Code empty")
+        return false
+      }
+      const data = {
+        client_name: $('#client_name').val(),
+        client_email: $('#client_email').val(),
+        client_phone: $('#client_phone').val(),
+        service_recipient_name: $('#service_recipient_name').val(),
+        grecaptcha_response : v,
+        // Make sure any extra attribute fields are in a separate object.
+        attributes: {
+          'attributes-tell-us-about-yourself': $('#attributes-tell-us-about-yourself').val()
+        }
+      }
+      $.ajax({
+        type: 'POST',
+        url: 'https://socket.tutorcruncher.com/{{ site.socket_key }}/enquiry',
+        data: JSON.stringify(data),
+        dataType: 'json'
+      }).done(function() {
+        $('form').html('Form successfully submitted!')
+      })
+    })
+  </script>
+</body>
+{% endhighlight %}
+
+<style>
+  input[type=text], input[type=email], textarea {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+  }
+
+  button {
+    width: 100%;
+    background-color: #4CAF50;
+    color: white;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+
+  button:hover {
+    background-color: #45a049;
+  }
+
+  div#enquiry-form {
+    border-radius: 5px;
+    background-color: #f2f2f2;
+    border: 1px solid #ccc;
+    padding: 20px;
+    width: 50%;
+    margin: 0 auto;
+  }
+
+  .g-recaptcha {
+    display: inline-block;
+  }
+</style>
+<div id="enquiry-form">
+  <form action="#" method="POST">
+    <input type="text" id="client_name" name="client_name" placeholder="Name (Required)" required="required" maxlength="255">
+    <input type="text" id="service_recipient_name" name="service_recipient_name" placeholder="Student name" maxlength="255">
+    <input type="email" id="client_email" name="client_email" placeholder="Email" maxlength="255">
+    <input type="text" id="client_phone" name="client_phone" placeholder="Phone number" maxlength="255">
+    <textarea id="attributes-tell-us-about-yourself" attrtype="true" name="attributes-tell-us-about-yourself" placeholder="Tell us about your needs" maxlength="2047" rows="5"></textarea>
+    <div class="text-center">
+      <div class="g-recaptcha" data-sitekey="6LdyXRgUAAAAADUNhMVKJDXiRr6DUN8TGOgllqbt"></div>
+    </div>
+    <button type="submit">Submit</button>
+  </form>
+</div>
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<script>
+  $('form').submit(function(e) {
+    e.preventDefault()
+    const v = grecaptcha.getResponse()
+    if (v.length === 0) {
+      $('#captcha').html("You can't leave Captcha Code empty")
+      return false
+    }
+    const data = {
+      client_name: $('#client_name').val(),
+      client_email: $('#client_email').val(),
+      client_phone: $('#client_phone').val(),
+      service_recipient_name: $('#service_recipient_name').val(),
+      grecaptcha_response : v,
+      // Make sure any extra attribute fields are in a separate object.
+      attributes: {
+        'attributes-tell-us-about-yourself': $('#attributes-tell-us-about-yourself').val()
+      }
+    }
+    $.post(
+      'https://socket.tutorcruncher.com/{{ site.socket_key }}/enquiry',
+      JSON.stringify(data),
+      () => $('form').html('Form successfully submitted!'),
+      'json'
+    )
+  })
+</script>
