@@ -1,0 +1,40 @@
+---
+layout: socket_example
+title: Customised Text Example
+permalink: /examples/customised-messages-view/
+description: An example of the enquiry form with customised messages
+---
+A full list of the customisable messages and their labels can be found
+<a href="https://github.com/tutorcruncher/socket-frontend/blob/master/src/index.js#L26">here</a>.
+
+{% highlight html %}
+<div id="customised-messages-view"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#customised-messages-view',
+    mode: 'enquiry',
+    messages: {
+      submit_enquiry: 'Make Inquiry',
+      enquiry_submitted_thanks: 'Inquiry submitted!',
+      enquiry_title: 'Inquiry',
+    }
+  });
+</script>
+{% endhighlight %}
+
+<div id="customised-messages-view"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#customised-messages-view',
+    mode: 'enquiry',
+    messages: {
+      submit_enquiry: 'Make Inquiry',
+      enquiry_submitted_thanks: 'Inquiry submitted!',
+      enquiry_title: 'Inquiry',
+    }
+  });
+</script>
