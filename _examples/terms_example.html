@@ -1,0 +1,29 @@
+---
+layout: socket_example
+title: Terms and Conditions Example
+permalink: /examples/terms-and-conditions/
+description: An example of terms and conditions being set in TutorCruncher socket
+---
+{% highlight html %}
+<div id="socket-enquiry"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#socket-enquiry',
+    mode: 'enquiry'
+    terms_link: 'https://tutorcruncher.com/terms/'
+  });
+</script>
+{% endhighlight %}
+
+<div id="socket-enquiry"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#socket-enquiry',
+    mode: 'enquiry',
+    terms_link: 'https://tutorcruncher.com/terms/',
+  });
+</script>
