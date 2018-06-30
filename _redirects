@@ -1,4 +1,9 @@
-/*    /     200
 
 /enquiry /                                 200
 /*/enquiry  /:splat                        200
+
+# socket proxy:
+/socket-api/*  https://socket.tutorcruncher.com/:splat  200!
+
+# catch all other 404s and redirect to root
+/*    /     200
