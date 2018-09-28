@@ -7,6 +7,10 @@ description: An example of the tutors list in TutorCruncher socket using the Gri
 {% highlight html %}
 <div id="grid-view"></div>
 
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
     router_mode: 'history',

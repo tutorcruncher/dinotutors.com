@@ -10,6 +10,10 @@ A full list of the customisable messages and their labels can be found
 {% highlight html %}
 <div id="customised-messages-view"></div>
 
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
     router_mode: 'history',

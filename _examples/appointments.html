@@ -7,6 +7,10 @@ description: An example of booking appointments in TutorCruncher using Socket.
 {% highlight html %}
 <div id="book-apts"></div>
 
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
     router_mode: 'history',

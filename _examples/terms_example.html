@@ -7,6 +7,10 @@ description: An example of terms and conditions being set in TutorCruncher socke
 {% highlight html %}
 <div id="socket-enquiry"></div>
 
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
     router_mode: 'history',

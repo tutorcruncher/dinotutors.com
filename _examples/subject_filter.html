@@ -7,6 +7,10 @@ description: An example of the tutors list in TutorCruncher socket using the Sub
 {% highlight html %}
 <div id="subject-filter"></div>
 
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
     router_mode: 'history',
