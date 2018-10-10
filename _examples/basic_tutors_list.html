@@ -1,0 +1,23 @@
+---
+layout: socket_example
+title: Basic tutors list example
+permalink: /examples/basic-tutors-list/
+description: The simplest implementation of Socket on a site.
+---
+{% highlight html %}
+<div id="socket"></div>
+
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
+<script>
+  socket('{{ site.socket_key }}');
+</script>
+{% endhighlight %}
+
+<div id="socket"></div>
+
+<script>
+  socket('{{ site.socket_key }}');
+</script>
