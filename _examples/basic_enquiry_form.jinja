@@ -1,0 +1,29 @@
+---
+layout: socket_example
+title: Basic enquiry form example
+permalink: /examples/basic-enquiry-form/
+description: The simplest implementation of an enquiry form with Socket on a site.
+---
+{% highlight html %}
+<div id="socket-enquiry"></div>
+
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry',
+    element: '#socket-enquiry'
+  });
+</script>
+{% endhighlight %}
+
+<div id="socket-enquiry"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry',
+    element: '#socket-enquiry'
+  });
+</script>
