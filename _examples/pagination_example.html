@@ -1,0 +1,30 @@
+---
+layout: socket_example
+title: Pagination example
+permalink: /examples/pagination/
+description: An example of the pagination in TutorCruncher socket.
+---
+{% highlight html %}
+<div id="pagination"></div>
+
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#pagination',
+    pagination: 5
+  });
+</script>
+{% endhighlight %}
+
+<div id="pagination"></div>
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#pagination',
+    pagination: 5
+  });
+</script>
