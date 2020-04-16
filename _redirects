@@ -1,3 +1,5 @@
+/api/*  https://api.tutorcruncher.com/:splat      200
+
 /*    /     200
 
 /enquiry /                                 200
