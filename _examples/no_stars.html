@@ -1,0 +1,31 @@
+---
+layout: socket_example
+title: No Review Stars Example
+permalink: /examples/no-stars/
+description: An example of the tutors list with no review stars shown
+---
+<div id="socket-no-stars"></div>
+
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+{% highlight html %}
+<!-- Then -->
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#socket-no-stars',
+    show_stars: false,
+  });
+</script>
+{% endhighlight %}
+
+<div id="socket-no-stars"></div>
+
+<script>
+  socket('{{ site.socket_key }}', {
+    router_mode: 'history',
+    element: '#socket-no-stars',
+    show_stars: false,
+  });
+</script>
