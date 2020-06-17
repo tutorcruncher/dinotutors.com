@@ -44,6 +44,7 @@
 </section>
 <script>
   socket('{{ site.socket_key }}', {
+    api_root: '{{ site.socket_api_root }}',
     router_mode: 'history'
   });
 </script>

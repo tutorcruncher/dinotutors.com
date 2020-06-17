@@ -24,6 +24,7 @@ description: An example of booking appointments in TutorCruncher using Socket.
 
 <script>
   socket('{{ site.socket_key }}', {
+    api_root: '{{ site.socket_api_root }}',
     router_mode: 'history',
     element: '#book-apts',
     mode: 'appointments'

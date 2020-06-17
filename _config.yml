@@ -37,3 +37,4 @@ social:
     url: http://github.com/tutorcruncher
 
 socket_url: https://cdn.tutorcruncher.com/socket/latest/socket.js
+socket_api_root: https://socket-beta.tutorcruncher.com

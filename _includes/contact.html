@@ -20,6 +20,7 @@
 </section>
 <script>
   socket('{{ site.socket_key }}', {
+    api_root: '{{ site.socket_api_root }}',
     mode: 'enquiry',
     element: '#socket-enquiry'
   });
