@@ -11,7 +11,7 @@ theme: minima
 permalink: pretty
 highlighter: pygments
 
-socket_key: 9c79f14df986a1ec693c
+socket_key: 390eb8d224a0f64395eb
 gems:
   - jekyll-feed
 exclude:
@@ -37,3 +37,4 @@ social:
     url: http://github.com/tutorcruncher
 
 socket_url: https://cdn.tutorcruncher.com/socket/latest/socket.js
+socket_api_root: https://socket-beta.tutorcruncher.com

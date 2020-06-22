@@ -59,6 +59,7 @@
 
 <script>
   socket('{{ site.socket_key }}', {
+    api_root: '{{ site.socket_api_root }}',
     mode: 'enquiry-modal',
     element: '#socket-enquiry-modal',
     router_mode: 'history'
