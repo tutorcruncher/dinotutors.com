@@ -1,0 +1,50 @@
+---
+layout: socket_example
+title: Basic enquiry form example in an iframe
+permalink: /examples/basic-enquiry-form/
+description: The simplest implementation of an enquiry form with Socket on a site.
+---
+{% highlight html %}
+<div id="socket-enquiry"></div>
+
+<!-- If you haven't called it before -->
+<script src="{{ site.socket_url }}"></script>
+
+<!-- Then -->
+<script>
+  socket('{{ site.socket_key }}', {
+    mode: 'enquiry',
+    element: '#socket-enquiry'
+  });
+</script>
+{% endhighlight %}
+
+<iframe id="iframe-010"
+        frameborder="0"
+        sandbox="allow-scripts allow-same-origin allow-forms allow-popups allow-presentation allow-top-navigation"
+        src="javascript: window.frameElement.getAttribute('srcdoc');"
+        srcdoc="
+        <script>
+          window.onmessage = function(event) {
+            event.source.postMessage({
+              iframeId: event.data,
+              scrollHeight: document.body.getBoundingClientRect().height || document.body.scrollHeight
+            }, event.origin);
+          };
+        </script>
+          <body style='margin: 0'>
+            <div id='socket-enquiry'></div>
+
+            <!-- If you haven't called it before -->
+            <script src='https://cdn.tutorcruncher.com/socket/latest/socket.js';></script>
+
+            <!-- Then -->
+            <script>
+              socket('03cb4a5bb5a6d4b48d70', {
+                mode: 'enquiry',
+                element: '#socket-enquiry'
+              });
+            </script>
+          </body>"
+        style="width: 100%; overflow: visible; transition: height 1.5s ease 0s; height: 535px;">
+</iframe>
