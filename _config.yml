@@ -9,7 +9,7 @@ meta_author: Tom Hamilton Stubber
 markdown: kramdown
 theme: minima
 permalink: pretty
-highlighter: pygments
+highlighter: rouge
 
 socket_key: 9c79f14df986a1ec693c
 gems:
@@ -37,3 +37,4 @@ social:
     url: http://github.com/tutorcruncher
 
 socket_url: https://cdn.tutorcruncher.com/socket/latest/socket.js
+socket_api_root: https://socket.tutorcruncher.com
