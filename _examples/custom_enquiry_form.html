@@ -104,7 +104,7 @@ description: An example of a custom form used instead of Socket Frontend to subm
     <input type="text" id="service_recipient_name" name="service_recipient_name" placeholder="Student name" maxlength="255">
     <input type="email" id="client_email" name="client_email" placeholder="Email" maxlength="255">
     <input type="text" id="client_phone" name="client_phone" placeholder="Phone number" maxlength="255">
-    <textarea id="attributes-tell-us-about-yourself" attrtype="true" name="attributes-tell-us-about-yourself" placeholder="Tell us about your needs" maxlength="2047" rows="5"></textarea>
+    <textarea id="tell-us-about-yourself" attrtype="true" name="tell-us-about-yourself" placeholder="Tell us about your needs" maxlength="2047" rows="5"></textarea>
     <div class="text-center">
       <div class="g-recaptcha" data-sitekey="6LdyXRgUAAAAADUNhMVKJDXiRr6DUN8TGOgllqbt"></div>
     </div>
@@ -129,7 +129,7 @@ description: An example of a custom form used instead of Socket Frontend to subm
       grecaptcha_response : v,
       // Make sure any extra attribute fields are in a separate object.
       attributes: {
-        'attributes-tell-us-about-yourself': $('#attributes-tell-us-about-yourself').val()
+        'tell_us_about_yourself': $('#tell-us-about-yourself').val()
       }
     }
     $.post(
