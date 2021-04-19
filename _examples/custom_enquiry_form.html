@@ -37,13 +37,13 @@ description: An example of a custom form used instead of Socket Frontend to subm
       }
       const data = {
         client_name: $('#client_name').val(),
-        client_email: $('#client_email').val(),
-        client_phone: $('#client_phone').val(),
-        service_recipient_name: $('#service_recipient_name').val(),
+        client_email: $('#client_email').val() || null,
+        client_phone: $('#client_phone').val() || null,
+        service_recipient_name: $('#service_recipient_name').val() || null,
         grecaptcha_response : v,
         // Make sure any extra attribute fields are in a separate object.
         attributes: {
-          'tell_us_about_yourself': $('#tell-us-about-yourself').val()
+          'tell_us_about_yourself': $('#tell-us-about-yourself').val() || null,
         }
       }
       $.ajax({
