@@ -13,7 +13,7 @@ description: An example of booking appointments in TutorCruncher using Socket.
 <!-- Then -->
 <script>
   socket('{{ site.socket_key }}', {
-    router_mode: 'history',
+    router_mode: 'hash',
     element: '#book-apts',
     mode: 'appointments'
   });
@@ -24,7 +24,7 @@ description: An example of booking appointments in TutorCruncher using Socket.
 
 <script>
   socket('{{ site.socket_key }}', {
-    router_mode: 'history',
+    router_mode: 'hash',
     element: '#book-apts',
     mode: 'appointments'
   });
